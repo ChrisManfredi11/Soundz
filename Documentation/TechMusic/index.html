@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    <title>
+      Documentation for TechMusic HTML Template
+    </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/exercise-files.css">
+    <link href="assets/css/prism.css" rel="stylesheet" />
+    
+    
+</head>
+<body>
+<script src="assets/js/prism.js"></script>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="wrapper">
+            <h1><span class="colored">TechMusic</span> - HTML Template</h1>    
+            <div class="sub">Documentation</div>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul class="wrapper">
+            <li>
+                <a href="#chapter-01">1: Typography</a>
+                <ul>
+                    <li><a href="#part-101">1.1 - Change google fonts</a></li>
+                    <li><a href="#part-102">1.2 - SVG format fonts for smoother text in webkit browsers</a></li>
+                    <li><a href="#part-103">1.3 - FONT icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chapter-02">2: CSS/LESS</a>
+                <ul>
+                    <li><a href="#part-201">2.1 - LESS files</a></li>
+                    <li><a href="#part-202">2.2 - CSS files</a></li>
+                    <li><a href="#part-203">2.3 - Change colors easy</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chapter-03">C3: HTML structure</a>
+                <ul>
+                    <li><a href="#part-301">3.1 - Elements</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chapter-04">4: Javascript - jQuery library and plugins</a>
+                <ul>
+                    <li><a href="#part-401">4.1 - Include plugins</a></li>
+                    <li><a href="#part-402">4.2 - Audio player </a></li>
+                    <li><a href="#part-403">4.3 - Add/Remove AutoPlay for jPlayer </a></li>
+                    <li><a href="#part-404">4.4 - Google Map  </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chapter-05">5: PHP - Contact form</a>
+                <ul>
+                    <li><a href="#part-501">5.1 - PHP - Contact form</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chapter-06">6: Credits</a>
+                <ul>
+                    <li><a href="#part-601">6.1 - Credits and resources</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chapter-07">7: Contact</a>
+                <ul>
+                    <li><a href="#part-701">7.1 - Contact us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="wrapper">
+    <!-- Main -->
+    <div id="main">
+        
+
+        <!-- ============================== 1:  TYPOGRAPHY =================================== -->
+
+
+
+        <section id="chapter-01" class="chapter">
+            <h2 class="chapter-title">1: Typography</h1>
+
+            <article id="part-101" class="movie">
+                <h3 class="movie-title">1.1 - Change google fonts</h3>
+                <h4>In fonts.css:</h4>
+                <p>Add your google fonts as in example bellow:</p>
+                <pre><code class="language-css">
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+}
+
+                </code></pre>
+            </article><!-- article -->
+
+            <article id="part-102" class="movie">
+                <h3 class="movie-title">1.2 - SVG format fonts for smoother text in webkit browsers</h3>
+                <h4>In fonts.css:</h4>
+                <p>Include local svg format fonts like example bellow:</p>
+                <pre><code class="language-css">
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.svg') format('svg');
+    font-weight: 300;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato.svg') format('svg');
+    font-weight: 400;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Bold.svg') format('svg');
+    font-weight: 700;
+  }
+}
+                </code></pre>
+            </article><!-- article -->
+
+            <article id="part-103" class="movie">
+                <h3 class="movie-title">1.3 - Font icons</h3>
+                <h4>Entypo icons preview - <a href="http://fontello.github.io/entypo/demo.html">http://fontello.github.io/entypo/demo.html</a></h4>
+                <p>Include them in page like example bellow:</p>
+
+                <pre><code class="language-php">
+&lt;i class='icon-search'>&lt;/i>
+                </code></pre>   
+                <h4>Flaticon icons preview - <a href="assets/flaticon/flaticon.html">flaticon.html</a></h4> 
+                <p>Include them in page like example bellow:</p>
+                <pre><code class="language-php">
+&lt;i class='flaticon-play36'>&lt;/i>
+                </code></pre>   
+            </article><!-- article -->
+
+
+        </section><!-- #Typography -->
+
+
+
+
+        <!-- ============================== 2:  CSS/LESS =================================== -->
+
+
+        <section id="chapter-02" class="chapter">
+            <h2 class="chapter-title">2: CSS/LESS</h1>
+
+            <article id="part-201" class="movie">
+                <h3 class="movie-title">2.1 - LESS files</h3>
+                <h4>In "less" folder:</h4>
+                <p>Style.less is the main less file and imports other css and less files</p>
+                <pre><code class="language-css">
+        
+@import "../css/fonts.css";
+@import "../css/entypo.css";
+@import "../css/flaticon.css";
+@import "../css/lightbox.css";
+@import "animations";
+                </code></pre>
+            </article><!-- article -->
+
+            <article id="part-202" class="movie">
+                <h3 class="movie-title">2.2 - CSS files</h3>
+                <h4>In "css" folder:</h4>
+                <p>Style.css is the main css file compiled from style.less file. <br>
+                Other required css files are also loaded in header</p>
+                <pre><code class="language-php">
+<!-- CSS -->
+    &lt;link rel="stylesheet" href="assets/css/bootstrap.css">
+    &lt;link rel="stylesheet" type="text/css" href="assets/rs-plugin/css/settings.css" media="screen" />
+    &lt;link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+                </code></pre>
+            </article><!-- article -->
+
+            <article id="part-203" class="movie">
+                <h3 class="movie-title">1.3 - Change colors easy</h3>
+                <h4>With LESS you cand change colors just by replacing one single line of code like so :</h4>
+                <pre><code class="language-css">
+@base-color: #ec5538;
+                </code></pre>   
+            </article><!-- article -->
+
+
+        </section><!-- #CSS/LESS -->
+
+
+        <!-- ============================== 2:  HTML Structure =================================== -->
+
+
+        <section id="chapter-03" class="chapter">
+            <h2 class="chapter-title">3: HTML structure</h1>
+
+            <article id="part-301" class="movie">
+                <h3 class="movie-title">3.1 - Elements</h3>
+                <h4>TechMusic template is built from separated sections.</h4>
+                <p>You can create easy new pages by mixing sections inside the body tag.</p>
+                <p>This is a section example:</p>
+                <pre><code class="language-php">
+        
+&lt;!-- Gallery -->
+&lt;div class="container gallery fadeInUp">
+    &lt;div class="row">
+        &lt;div class="col-sm-12 col-md-4 info">
+            &lt;i class="large-icon flaticon-small26">&lt;/i>
+            &lt;h2>Events &lt;span class="colored">Gallery&lt;/span>&lt;/h2>
+            &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat magna quis urna convallis suscipit. Nulla facilisi. Phasellus varius vitae diam ultrices lacinia augue.&lt;/p>
+            &lt;a href="gallery.html" class="view-all">-VIEW ALL&lt;/a>
+        &lt;/div>
+        &lt;div class="col-sm-12 col-md-8">
+            &lt;div class="row">
+                &lt;div class="col-sm-6 event">
+                    &lt;div class="cover">
+                        &lt;img src="assets/img/gallery/event-gallery-1.jpg" alt="Event 1" class="img-responsive">
+                        &lt;a class="icon-picture" href="assets/img/gallery/event-gallery-1.1.jpg" data-lightbox="image-1" data-title="Event 1">&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="col-sm-6 event">
+                    &lt;div class="cover">
+                        &lt;img src="assets/img/gallery/event-gallery-2.jpg" alt="Event 2" class="img-responsive">
+                        &lt;a class="icon-picture" href="assets/img/gallery/event-gallery-2.1.jpg" data-lightbox="image-2" data-title="Event 2">&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                </code></pre>
+            </article><!-- article -->
+
+        </section><!-- #HTML structure -->
+
+
+        <!-- ============================== 1:  Javascript =================================== -->
+
+
+
+        <section id="chapter-04" class="chapter">
+            <h2 class="chapter-title">4: Javascript - jQuery library and plugins</h1>
+
+            <article id="part-401" class="movie">
+                <h3 class="movie-title">4.1 - Include plugins</h3>
+                <h4>jQuery library and modernizr.custom.js are loaded in the head section. <br>
+                The rest of them are loaded on the bottom of the page along with some custom settings.</h4>
+                <p>See an aexample bellow:</p>
+                <pre><code class="language-javascript">
+&lt;!-- jQuery REVOLUTION Slider  -->
+    &lt;script type="text/javascript" src="assets/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    &lt;script type="text/javascript" src="assets/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    &lt;script type="text/javascript"> 
+        jQuery(document).ready(function($) {
+            "use strict";
+            jQuery('.tp-banner').revolution(
+            {
+                // You can edit here settings
+                delay:4000,
+                startwidth:1200,
+                startheight:783,
+                hideThumbs:10,
+                fullWidth:"on",
+                fullScreen:"off",
+                fullScreenOffsetContainer: "",
+                navigationStyle: "off",
+                shadow: 0,
+            });
+        });
+    &lt;/script>
+                </code></pre>
+            </article><!-- article -->
+
+            <article id="part-402" class="movie">
+                <h3 class="movie-title">4.2 - Audio player</h3>
+                <h4>For adding tracks in playlist, go to the bottom of the page and find the settings for audio player. <br>
+                Learn more about jPlayer <a href="http://www.jplayer.org/">here</a></h4>
+                <p>See the example bellow</p>
+                <pre><code class="language-javascript">
+&lt;!-- jPlayer -->
+&lt;script type="text/javascript" src="assets/jplayer/jquery.jplayer.min.js"></script>
+&lt;script type="text/javascript" src="assets/jplayer/jplayer.playlist.min.js"></script>
+&lt;script type="text/javascript">
+
+    $(document).ready(function(){
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"Cro Magnon Man",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+            },
+            {
+                title:"Your Face",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"Cyber Sonnet",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+        ], {
+            playlistOptions: {
+                autoPlay: true
+            },
+            swfPath: "assets/jplayer",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: true
+        });
+    });
+&lt;/script>
+                </code></pre>
+            </article><!-- article -->
+
+
+            <article id="part-403" class="movie">
+                <h3 class="movie-title">4.3 - Add/Remove AutoPlay for jPlayer</h3>
+                <h4>If you don't want the music to play when the page loads, set the AutoPlay value to False. <br>
+                
+                <pre><code class="language-javascript">
+playlistOptions: {
+    autoPlay: true
+},
+                </code></pre>
+            </article><!-- article -->
+
+            <article id="part-404" class="movie">
+                <h3 class="movie-title">4.4 - Google Map</h3>
+                <h4>For changing the location for google map, go to google.map.js and replace coordinates.</h4>
+                <p>See an example bellow:</p>
+
+                <pre><code class="language-javascript">
+ center: new google.maps.LatLng(44.435225,26.102132),
+                </code></pre> 
+                
+            </article><!-- article -->
+
+        </section><!-- #Javascript -->
+
+
+        <!-- ============================== 5:  PHP - CONTACT FORM =================================== -->
+
+
+        <section id="chapter-05" class="chapter">
+            <h2 class="chapter-title">5: PHP Contact Form</h1>
+
+            <article id="part-501" class="movie">
+                <h3 class="movie-title">5.1 - Contact Form</h3>
+                <h4>You need to change the email adress in contact.php file</h4>
+                <p>See an example bellow:</p>
+                <pre><code class="language-php">
+        
+$mail_to = 'youremail@domain.com';
+                </code></pre>
+            </article><!-- article -->
+
+
+        </section><!-- #PHP Contact form -->
+
+
+        <!-- ============================== 6:  Credits and resources =================================== -->
+
+
+        <section id="chapter-06" class="chapter">
+            <h2 class="chapter-title">6: Credits and resources</h1>
+
+            <article id="part-601" class="movie">
+                <h3 class="movie-title">6.1 - Credits and resources</h3>
+                <h4>This documentation is a small guide for using this template. Check the list bellow for detailed informations:</h4>
+                <ol class="credits">
+                    <li>Bootstrap - <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+                    <li>Entypo icons - <a href="http://www.entypo.com/">http://www.entypo.com/</a></li>
+                    <li>Slider Revolution - <a href="http://themes.themepunch.com/?theme=revolution_jq">http://themes.themepunch.com/?theme=revolution_jq</a></li>
+                    <li>Google fonts - <a href="http://www.google.com/fonts">http://www.google.com/fonts</a></li>
+                    <li>Less - <a href="http://www.lesscss.org">http://www.lesscss.org</a></li>
+                </ol>
+            </article><!-- article -->
+
+
+        </section><!-- #Credits -->
+
+
+        <!-- ============================== 6:  Contact =================================== -->
+
+
+        <section id="chapter-07" class="chapter">
+            <h2 class="chapter-title">7: Contact Us</h1>
+
+            <article id="part-701" class="movie">
+                <h4>Thank you for buying our template! If you have any questions beyond the scoop of this file, feel free to open a ticket at  <a href="http://elephantthemes.ticksy.com">http://elephantthemes.ticksy.com</a></h4>
+            </article><!-- article -->
+
+
+        </section><!-- #Credits -->
+
+
+        
+    </div><!-- #main -->
+
+    <footer class="footer">
+  
+    </footer>
+</div>
+</body>
+</html>
